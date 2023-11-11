@@ -211,11 +211,7 @@
     })
     .then(response => response.json())
     .then(data => {
-        // Display the prediction result
-        // var outputDiv = document.getElementById('output');
-        // outputDiv.innerHTML = '<strong>Recommendation:</strong> ' + data.prediction;
-        // outputDiv.style.color = data.prediction === 'Recommended' ? 'green' : 'red';
-
+        
         var outputDiv = document.getElementById('output');
         outputDiv.innerHTML = '<strong>Recommendation:</strong> ' + data.prediction;
         outputDiv.style.color = data.prediction === 1 ? 'green' : 'red';
