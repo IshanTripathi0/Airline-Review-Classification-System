@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Review Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <h1>Airline Review Prediction</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <label for="airline">Airline:</label>
+        <select name="airline" id="airline">
+            {% for airline in airlines %}
+                <option value="{{ airline }}">{{ airline }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="origin">Origin:</label>
+        <select name="origin" id="origin">
+            {% for origin in origins %}
+                <option value="{{ origin }}">{{ origin }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="destination">Destination:</label>
+        <select name="destination" id="destination">
+            {% for destination in destinations %}
+                <option value="{{ destination }}">{{ destination }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="month_flown">Month Flown:</label>
+        <select name="month_flown" id="month_flown">
+            {% for month in months %}
+                <option value="{{ month }}">{{ month }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="overall_rating">Overall Rating:</label>
+        <input type="text" id="overall_rating" name="overall_rating" required><br>
+
+        <label for="verified">Verified:</label>
+        <select name="verified" id="verified">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+
+        <label for="traveller_type">Type of Traveller:</label>
+        <select name="traveller_type" id="traveller_type">
+            <option value="Solo Leisure">Solo Leisure</option>
+            <option value="Couple Leisure">Couple Leisure</option>
+            <option value="Business">Business</option>
+            <option value="Family Leisure">Family Leisure</option>
+        </select><br>
+
+        <label for="seat_type">Seat Type:</label>
+        <select name="seat_type" id="seat_type" required>
+            <option value="Economy Class">Economy Class</option>
+            <option value="Business Class">Business Class</option>
+            <option value="Premium Economy">Premium Economy</option>
+            <option value="First Class">First Class</option>
+        </select><br>
+        
+        <label for="year_flown">Year Flown:</label>
+        <input type="text" id="year_flown" name="year_flown" required><br>
+
+        <label for="seat_comfort">Seat Comfort:</label>
+        <input type="text" id="seat_comfort" name="seat_comfort" required><br>
+
+        <label for="cabin_service">Cabin Staff Service:</label>
+        <input type="text" id="cabin_service" name="cabin_service" required><br>
+
+        <label for="food_beverages">Food & Beverages:</label>
+        <input type="text" id="food_beverages" name="food_beverages" required><br>
+
+        <label for="ground_service">Ground Service:</label>
+        <input type="text" id="ground_service" name="ground_service" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
