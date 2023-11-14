@@ -39,8 +39,19 @@
         </select><br>
 
         <label for="overall_rating">Overall Rating:</label>
-        <input type="text" id="overall_rating" name="overall_rating" required><br>
-
+        <select name="overall_rating" id="overall_rating" required>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select><br>
         <label for="verified">Verified:</label>
         <select name="verified" id="verified">
             <option value="Yes">Yes</option>
@@ -67,17 +78,40 @@
         <input type="text" id="year_flown" name="year_flown" required><br>
 
         <label for="seat_comfort">Seat Comfort:</label>
-        <input type="text" id="seat_comfort" name="seat_comfort" required><br>
+        <select name="seat_comfort" id="seat_comfort" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br>
 
         <label for="cabin_service">Cabin Staff Service:</label>
-        <input type="text" id="cabin_service" name="cabin_service" required><br>
+        <select name="cabin_service" id="cabin_service" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br>
 
         <label for="food_beverages">Food & Beverages:</label>
-        <input type="text" id="food_beverages" name="food_beverages" required><br>
+        <select name="food_beverages" id="food_beverages" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br>
 
         <label for="ground_service">Ground Service:</label>
-        <input type="text" id="ground_service" name="ground_service" required><br>
-
+        <select name="ground_service" id="ground_service" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br>
         <input type="submit" value="Predict">
     </form>
 
