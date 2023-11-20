@@ -12,6 +12,7 @@ Welcome to the Airline Review Classification System! This project focuses on cla
 - [Project Structure](#project-structure)
 - [Acknowledgments](#acknowledgments)
 
+
 ## Introduction
 
 The Airline Review Classification System is designed to analyze and classify airline reviews using machine learning. It aims to provide valuable insights to airlines by categorizing reviews into positive, neutral, or negative sentiments. The project utilizes a variety of classification models, including Decision Tree, Random Forest, XGBoost, and more.
@@ -58,7 +59,6 @@ The project is structured as follows:
 - `Project Development Phase/FinalModel&Deployment/`: Pickle files for trained models.
 - `static/` and `templates/`: Files for the Flask app.
 
-For a detailed view of the project structure, refer to the [Project Structure](./tree/master#project-structure) section.
 
 ## Acknowledgments
 
